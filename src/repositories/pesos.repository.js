@@ -1,18 +1,13 @@
-const {Pesos} = require("../database/models/index");
+const { Pesos } = require("../database/models/index");
 
 const getAll = async () => {
-    try {
-      let registros = await Pesos.findAll({
-        order: [["id", "DESC"]],
-        raw: true,
-      });
-      return registros;
-    } catch (error) {
-      console.error("Erro ao buscar usuários:", error);
-      throw new Error(error);
-    }
-  };
+  let registros = await Pesos.findAll({
+    order: [["id", "DESC"]],
+    raw: true,
+  });
+  return registros;
+};
 
-  module.exports = {
-    getAll,
-  }
+module.exports = {
+  getAll,
+};
