@@ -1,16 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const repository = require("../repositories/ovino.repository");
+const controller = require("../controllers/ovinos.controllers");
 
-router.get("/", repository.getAll);
-
-router.get("/:id", repository.findByPk);
-
-router.post("/", repository.create);
-
-router.put("/", repository.update);
-
-router.delete("/:id", repository.deleta);
+router.get("/", controller.findAll);
+router.get("/:id", controller.findByPk);
+router.post("/", controller.create);
+router.put("/", controller.update);
+router.delete("/:id", controller.deleta);
 
 module.exports = router;

@@ -9,7 +9,7 @@ const getAll = async function () {
 }
 
 const findByPk = async function (id) {
-    const ovino = await repository.getByPk(id);
+    const ovino = await repository.findByPk(id);
     if (!ovino) {
         return createError(404, "Ovino não encontrado.");
     }
