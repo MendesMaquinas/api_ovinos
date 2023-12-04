@@ -1,7 +1,7 @@
 const ovinosRepository = require("../repositories/ovino.repository");
 const createError = require("http-errors");
 
-const repository = require("../repositories/ovino.repository")
+const repository = require("../repositories/ovino.repository");
 
 const getAll = async function () {
     const ovinos = await repository.getAll();

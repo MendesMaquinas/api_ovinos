@@ -8,7 +8,7 @@ const getAll = async () => {
   return registros;
 };
 
-const getByPk = async (id) => {
+const findByPk = async (id) => {
   let registro = await Ovinos.findByPk(id, {
     raw: true,
   });
@@ -48,8 +48,8 @@ const deleta = async (id) => {
 
 module.exports = {
   getAll,
-  getByPk,
+  findByPk,
   create,
-  deleta,
   update,
+  deleta,
 };
